@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Finanzas",
+    "logo": "finanzas.png"
+  },
+  {
+    "title": "Bienes Raíces",
+    "logo": "bienes.png"
+  },
+  {
+    "title": "Servicios B2B",
+    "logo": "servicios.png"
+  },
+  {
+    "title": "Tecnología",
+    "logo": "tec.png"
+  }
+]
