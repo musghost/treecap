@@ -8,7 +8,7 @@ import {Component, Input} from '@angular/core';
         <img src="assets/images/treecap.png">
       </div>
       <nav class="menu">
-        <a href="#">Portal de inversionistas</a>
+        <a href="#">Portal de Inversionistas</a>
         <a href="#" (click)="enter()">Entrar</a>
       </nav>
     </header>

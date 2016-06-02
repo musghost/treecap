@@ -11,10 +11,10 @@ import {Modal} from './modal';
     <div class="main-container">
       <Header [modal]="toggleModal"></Header>
       <Modal *ngIf="showModal"></Modal>
-      <main class="main">
+      <main class="main one">
         <TitleComponent></TitleComponent>
       </main>
-      <main class="main">
+      <main class="main two">
         <Services></Services>
       </main>
       <Footer></Footer>

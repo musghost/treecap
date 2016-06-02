@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Exo2';
+  src: url('assets/fonts/exo2/Exo2-Regular.ttf') format('truetype');
+}
+
 html, body, app {
   margin: 0;
   height: 100%;
@@ -11,6 +16,7 @@ app {
 body {
   font-family: 'Open Sans', sans-serif;
   background: #003979;
+  font-family: 'Exo2';
 }
 
 .main-container {
@@ -45,13 +51,16 @@ header {
     a {
       display: inline-block;
       padding: 8px 25px;
-      font-size: 12px;
+      font-size: 14px;
       text-decoration: none;
       position: relative;
       color: #fff;
+      letter-spacing: 2px;
 
       & + a{
         margin-left: 5px;
+        letter-spacing: 0;
+        font-size: 13px;
       }
 
       &:last-child {
@@ -153,6 +162,22 @@ main {
   display: block;
   height: 100%;
   position: relative;
+  background: {
+    repeat: no-repeat;
+    size: cover;
+  }
+
+  &.one {
+    background: {
+      image: url('assets/images/treeone.png');
+    }
+  }
+
+  &.two {
+    background: {
+      image: url('assets/images/treetwo.png');
+    }
+  }
 }
 
 titlecomponent,
@@ -162,6 +187,12 @@ services {
   right: 0;
   top: 50%;
   transform: translateY(-60%);
+}
+
+titlecomponent {
+  h1 {
+    font-size: 40px;
+  }
 }
 
 .services {
@@ -175,6 +206,12 @@ services {
     display: inline-block;
     text-align: center;
     width: 25%;
+
+    h3 {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 13px;
+    }
 
     .index {
       width: 20px;
