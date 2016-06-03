@@ -4,9 +4,9 @@ import {Component} from '@angular/core';
   selector: 'Footer',
   template: `
     <footer class="footer">
-      <div class="code">
-        <p>Introduce código único para descargar nuestra presentación .ppt</p>
-      </div>
+      <form class="code" (ngSubmit)="onSubmit()">
+        <p>Introduce código único para descargar nuestra presentación .ppt <input type="text" [(ngModel)]="code"></p>
+      </form>
       <div class="contact">
         <ul>
           <li>(55) 4567.8450</li>
@@ -20,4 +20,11 @@ import {Component} from '@angular/core';
     </footer>
   `
 })
-export class Footer {}
+export class Footer {
+  constructor() {
+    this.code = '3';
+  }
+  onSubmit() {
+
+  }
+}

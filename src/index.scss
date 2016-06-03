@@ -93,6 +93,22 @@ footer {
   right: 0;
   z-index: 3;
 
+  input {
+    border: 0;
+    height: 30px;
+    border-radius: 15px;
+    width: 100px;
+    margin-left: 40px;
+    box-sizing: border-box;
+    padding: 0 15px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 2px 2px #FFF700;
+      border: 2px solid #FFE5A9;
+    }
+  }
+
   .code {
     background: #FBAA19;
     text-align: center;
@@ -100,6 +116,13 @@ footer {
     color: #fff;
     font-size: 14px;
     letter-spacing: 1px;
+
+    &:hover {
+      input {
+        box-shadow: 0px 0px 2px 2px #FFF700;
+        border: 2px solid #FFE5A9;
+      }
+    }
   }
 
   .contact {
