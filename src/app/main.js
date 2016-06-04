@@ -4,23 +4,28 @@ import {Title} from './title';
 import {Services} from './services/services';
 import {Footer} from './footer';
 import {Modal} from './modal';
+import {MnFullpageDirective} from 'ng2-fullpage';
 
 @Component({
   selector: 'App',
   template: `
-    <div class="main-container">
-      <Header [modal]="toggleModal"></Header>
-      <Modal *ngIf="showModal"></Modal>
-      <main class="main one">
-        <TitleComponent></TitleComponent>
-      </main>
-      <main class="main two">
-        <Services></Services>
-      </main>
-      <Footer></Footer>
+    <Header [modal]="toggleModal"></Header>
+    <Modal *ngIf="showModal" [modal]="toggleModal"></Modal>
+    <div mnFullpage [mnFullpageNavigation]="true" [mnFullpageKeyboardScrolling]="true">
+      <div class="section">
+        <main class="main one">
+          <TitleComponent></TitleComponent>
+        </main>
+      </div>
+      <div class="section">
+        <main class="main two">
+          <Services></Services>
+        </main>
+      </div>
     </div>
+    <Footer></Footer>
   `,
-  directives: [Header, Title, Services, Footer, Modal]
+  directives: [Header, Title, Services, Footer, Modal, MnFullpageDirective]
 })
 export class Main {
   constructor() {
@@ -28,7 +33,6 @@ export class Main {
   }
 
   toggleModal = () => {
-    console.log(':ojjkl');
     this.showModal = !this.showModal;
   }
 }

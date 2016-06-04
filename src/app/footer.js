@@ -22,9 +22,11 @@ import {Component} from '@angular/core';
 })
 export class Footer {
   constructor() {
-    this.code = '3';
+    this.code = '';
   }
   onSubmit() {
-
+    if (this.code == 'TreeCap1880') {
+      window.open('/assets/TreeCap_NEW.pdf');
+    }
   }
 }

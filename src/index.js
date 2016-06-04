@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 import 'zone.js';
+import 'jquery';
 
 import {bootstrap} from '@angular/platform-browser-dynamic';
 
