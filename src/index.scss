@@ -40,6 +40,12 @@ header {
   right: 0;
   z-index: 1;
 
+  @media screen and (max-width: 470px) {
+    position: static;
+    padding: 5px;
+    text-align: center;
+  }
+
   .logo {
     display: inline-block;
     float: left;
@@ -93,6 +99,10 @@ footer {
   right: 0;
   z-index: 3;
 
+  @media screen and (max-width: 470px) {
+    position: static;
+  }
+
   input {
     border: 0;
     height: 30px;
@@ -117,11 +127,19 @@ footer {
     font-size: 14px;
     letter-spacing: 1px;
 
+    input {
+      @media screen and (max-width: 470px) {
+        display: block;
+        margin: 20px auto 0;
+      }
+    }
+
     &:hover {
       input {
         box-shadow: 0px 0px 2px 2px #FFF700;
         border: 2px solid #FFE5A9;
       }
+
     }
   }
 
@@ -178,6 +196,10 @@ footer {
     display: inline-block;
     max-width: 40%;
     line-height: 30px;
+
+    @media screen and (max-width: 985px) {
+      max-width: 80%;
+    }
   }
 }
 
@@ -194,11 +216,17 @@ main {
     background: {
       image: url('assets/images/treeone.png');
     }
+    @media screen and (max-width: 470px) {
+      background-image: none;
+    }
   }
 
   &.two {
     background: {
       image: url('assets/images/treetwo.png');
+    }
+    @media screen and (max-width: 470px) {
+      background-image: none;
     }
   }
 }
@@ -210,6 +238,11 @@ services {
   right: 0;
   top: 50%;
   transform: translateY(-60%);
+
+  @media screen and (max-width: 470px) {
+    position: static;
+    transform: none;
+  }
 }
 
 titlecomponent {
@@ -229,6 +262,11 @@ titlecomponent {
     display: inline-block;
     text-align: center;
     width: 25%;
+
+    @media screen and (max-width: 470px) {
+      width: 100%;
+       margin-bottom: 40px;
+    }
 
     h3 {
       text-transform: uppercase;
@@ -253,6 +291,10 @@ services {
     p {
       max-width: 50%;
       margin-bottom: 60px;
+
+      @media screen and (max-width: 470px) { 
+        max-width: 90%;
+      }
     }
   }
 }

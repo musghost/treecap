@@ -11,7 +11,19 @@ import {MnFullpageDirective} from 'ng2-fullpage';
   template: `
     <Header [modal]="toggleModal"></Header>
     <Modal *ngIf="showModal" [modal]="toggleModal"></Modal>
-    <div mnFullpage [mnFullpageNavigation]="true" [mnFullpageKeyboardScrolling]="true">
+    <div mnFullpage [mnFullpageNavigation]="true" [mnFullpageKeyboardScrolling]="true" *ngIf="showModule">
+      <div class="section">
+        <main class="main one">
+          <TitleComponent></TitleComponent>
+        </main>
+      </div>
+      <div class="section">
+        <main class="main two">
+          <Services></Services>
+        </main>
+      </div>
+    </div>
+    <div *ngIf="!showModule">
       <div class="section">
         <main class="main one">
           <TitleComponent></TitleComponent>
@@ -30,6 +42,7 @@ import {MnFullpageDirective} from 'ng2-fullpage';
 export class Main {
   constructor() {
     this.showModal = false;
+    this.showModule = (window.innerWidth > 499);
   }
 
   toggleModal = () => {
