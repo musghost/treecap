@@ -25,7 +25,7 @@ export class Services {
   constructor(http) {
     this.http = http;
     this.getServices().subscribe(result => {
-      this.services = result.map(function(item, index){
+      this.services = result.map((item, index) => {
         item.index = index + 1;
         return item;
       });

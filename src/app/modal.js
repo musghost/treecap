@@ -33,7 +33,7 @@ import {Component, Input} from '@angular/core';
 export class Modal {
   @Input() modal;
 
-  constructor () {
+  constructor() {
     this.error = false;
   }
 

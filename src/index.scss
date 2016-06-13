@@ -40,7 +40,7 @@ header {
   right: 0;
   z-index: 1;
 
-  @media screen and (max-width: 470px) {
+  @media screen and (max-width: 768px) {
     position: static;
     padding: 5px;
     text-align: center;
@@ -53,6 +53,19 @@ header {
 
   .menu {
     float: right;
+
+    span {
+      display: inline-block;
+      padding: 8px 25px;
+      font-size: 14px;
+      text-decoration: none;
+      position: relative;
+      color: #fff;
+      letter-spacing: 2px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
 
     a {
       display: inline-block;
@@ -82,6 +95,9 @@ header {
           bottom: 4px;
           width: 1px;
           background: #fff;
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
         }
       }
     }
@@ -99,7 +115,7 @@ footer {
   right: 0;
   z-index: 3;
 
-  @media screen and (max-width: 470px) {
+  @media screen and (max-width: 768px) {
     position: static;
   }
 
@@ -128,7 +144,7 @@ footer {
     letter-spacing: 1px;
 
     input {
-      @media screen and (max-width: 470px) {
+      @media screen and (max-width: 768px) {
         display: block;
         margin: 20px auto 0;
       }
@@ -186,6 +202,28 @@ footer {
 
   .mellow {
     float: right;
+    text-align: center;
+    img {
+      max-width: 100%;
+      width: 400px;
+    }
+
+    .img-small {
+      display: none;
+      max-width: 200px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+
+      .img-small {
+        display: inline-block;
+        margin-top: 20px;
+      }
+      .img-normal {
+        display: none;
+      }
+    }
   }
 }
 
@@ -216,7 +254,7 @@ main {
     background: {
       image: url('assets/images/treeone.png');
     }
-    @media screen and (max-width: 470px) {
+    @media screen and (max-width: 768px) {
       background-image: none;
     }
   }
@@ -225,7 +263,7 @@ main {
     background: {
       image: url('assets/images/treetwo.png');
     }
-    @media screen and (max-width: 470px) {
+    @media screen and (max-width: 768px) {
       background-image: none;
     }
   }
@@ -239,7 +277,7 @@ services {
   top: 50%;
   transform: translateY(-60%);
 
-  @media screen and (max-width: 470px) {
+  @media screen and (max-width: 768px) {
     position: static;
     transform: none;
   }
@@ -263,7 +301,7 @@ titlecomponent {
     text-align: center;
     width: 25%;
 
-    @media screen and (max-width: 470px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
        margin-bottom: 40px;
     }
@@ -292,7 +330,7 @@ services {
       max-width: 50%;
       margin-bottom: 60px;
 
-      @media screen and (max-width: 470px) { 
+      @media screen and (max-width: 768px) { 
         max-width: 90%;
       }
     }

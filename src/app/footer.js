@@ -14,7 +14,8 @@ import {Component} from '@angular/core';
           <li>Paseo de las Palmas 1880, Colonia Lomas de Chapultepec, CP11000</li>
         </ul>
         <div class="mellow">
-          <img src="assets/images/mellow.png">
+          <img src="assets/images/mellow.png" class="img-normal">
+          <img src="assets/images/Mellow-01.png" class="img-small">
         </div>
       </div>
     </footer>
@@ -25,7 +26,7 @@ export class Footer {
     this.code = '';
   }
   onSubmit() {
-    if (this.code == 'TreeCap1880') {
+    if (this.code === 'TreeCap1880') {
       window.open('/assets/TreeCap_NEW.pdf');
     }
   }

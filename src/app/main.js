@@ -42,7 +42,7 @@ import {MnFullpageDirective} from 'ng2-fullpage';
 export class Main {
   constructor() {
     this.showModal = false;
-    this.showModule = (window.innerWidth > 499);
+    this.showModule = (window.innerWidth > 768);
   }
 
   toggleModal = () => {
