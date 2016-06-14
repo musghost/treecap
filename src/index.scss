@@ -205,12 +205,12 @@ footer {
     text-align: center;
     img {
       max-width: 100%;
-      width: 400px;
     }
 
     .img-small {
       display: none;
       max-width: 200px;
+      width: 400px;
     }
 
     @media screen and (max-width: 768px) {
