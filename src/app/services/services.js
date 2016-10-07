@@ -8,13 +8,34 @@ import {Service} from './service';
   template: `
     <div class="container">
       <h1 class="services-h1">
-        ¿Qué hacemos?
+        Our clients
       </h1>
-      <p>
-        Apoyamos proyectos que combinan rentabilidad con propósito y que tienen la misión de cambiar la comunidad en la que están. Nuestros servicios:
-      </p>
-      <div class="services">
-        <Service *ngFor="let service of services" [service]="service"></Service>
+      <div class="clients-wrapper">
+        <div class="clients">
+          <div *ngFor="let num of num1">
+            <img src="assets/logos/logo{{num + 1}}.png" />
+          </div>
+        </div>
+        <div class="clients">
+          <div *ngFor="let num of num2">
+            <img src="assets/logos/logo{{num + 7}}.png" />
+          </div>
+        </div>
+        <div class="clients">
+          <div *ngFor="let num of num3">
+            <img src="assets/logos/logo{{num + 13}}.png" />
+          </div>
+        </div>
+        <div class="clients">
+          <div *ngFor="let num of num4">
+            <img src="assets/logos/logo{{num + 19}}.png" />
+          </div>
+        </div>
+        <div class="clients">
+          <div *ngFor="let num of num5">
+            <img src="assets/logos/logo{{num + 25}}.png" />
+          </div>
+        </div>
       </div>
     </div>
   `,
@@ -30,6 +51,12 @@ export class Services {
         return item;
       });
     });
+
+    this.num1 = Array(6).fill().map((x, i) => i);
+    this.num2 = Array(6).fill().map((x, i) => i);
+    this.num3 = Array(6).fill().map((x, i) => i);
+    this.num4 = Array(6).fill().map((x, i) => i);
+    this.num5 = Array(6).fill().map((x, i) => i);
   }
 
   static get parameters() { // http://stackoverflow.com/questions/34800150/angular-2-es6-inject-http

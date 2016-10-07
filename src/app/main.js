@@ -4,6 +4,7 @@ import {Title} from './title';
 import {Services} from './services/services';
 import {Footer} from './footer';
 import {Modal} from './modal';
+import {FormClient} from './formclient';
 import {MnFullpageDirective} from 'ng2-fullpage';
 
 @Component({
@@ -22,6 +23,11 @@ import {MnFullpageDirective} from 'ng2-fullpage';
           <Services></Services>
         </main>
       </div>
+      <div class="section">
+        <main class="main three">
+          <FormClient></FormClient>
+        </main>
+      </div>
     </div>
     <div *ngIf="!showModule">
       <div class="section">
@@ -34,10 +40,15 @@ import {MnFullpageDirective} from 'ng2-fullpage';
           <Services></Services>
         </main>
       </div>
+      <div class="section">
+        <main class="main three">
+          <FormClient></FormClient>
+        </main>
+      </div>
     </div>
     <Footer></Footer>
   `,
-  directives: [Header, Title, Services, Footer, Modal, MnFullpageDirective]
+  directives: [Header, Title, Services, Footer, Modal, MnFullpageDirective, FormClient]
 })
 export class Main {
   constructor() {
